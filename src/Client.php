@@ -11,12 +11,12 @@ class Client
     /**
      * @var string
      */
-    protected $shop = '';
+    protected string $shop = '';
 
     /**
      * @var \Osiset\BasicShopifyAPI\BasicShopifyAPI
      */
-    protected $api;
+    protected BasicShopifyAPI $api;
 
     /**
      * Client constructor.
@@ -31,7 +31,7 @@ class Client
         $this->api = new BasicShopifyAPI($options);
         $this->api->setSession(new Session(
             config('shopify.shop'),
-            config('shopify.access_token')
+            config('shopify.api_secret')
         ));
     }
 
