@@ -9,11 +9,6 @@ use Osiset\BasicShopifyAPI\Session;
 class Client
 {
     /**
-     * @var string
-     */
-    protected string $shop = '';
-
-    /**
      * @var \Osiset\BasicShopifyAPI\BasicShopifyAPI
      */
     protected BasicShopifyAPI $api;
@@ -26,12 +21,13 @@ class Client
     public function __construct()
     {
         $options = new Options();
+        $options->setType(config('shopify.is_private'));
         $options->setVersion(config('shopify.version'));
 
         $this->api = new BasicShopifyAPI($options);
         $this->api->setSession(new Session(
             config('shopify.shop'),
-            config('shopify.api_secret')
+            config('shopify.access_token')
         ));
     }
 

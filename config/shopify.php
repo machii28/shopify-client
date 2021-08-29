@@ -18,14 +18,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Shopify issued API Secret
+    | Shopify issued API Access Token
     |--------------------------------------------------------------------------
     */
-    'api_secret' => env('SHOPIFY_API_SECRET', ''),
+    'access_token' => env('SHOPIFY_ACCESS_TOKEN', ''),
 
     /*
     |--------------------------------------------------------------------------
-    | Deteremine if app is privately used
+    | Determine if app is privately used
     |--------------------------------------------------------------------------
     */
     'is_private' => env('SHOPIFY_IS_PRIVATE_APP', true),
