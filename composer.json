@@ -1,0 +1,43 @@
+{
+    "name": "markc/shopify-client",
+    "description": "Osiset Shopify client wrapper",
+    "keywords": [
+        "markc",
+        "shopify-client"
+    ],
+    "homepage": "https://github.com/markc/shopify-client",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mark Cornelio",
+            "email": "markc@mindarc.com.au",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "osiset/basic-shopify-api": "^10.0"
+    },
+    "require-dev": {
+        "laravel/lumen-framework": "^8.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Markc\\ShopifyClient\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Markc\\ShopifyClient\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
