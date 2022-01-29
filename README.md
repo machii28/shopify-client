@@ -10,6 +10,9 @@ You can install the package via composer:
 composer require markc/shopify-client
 ```
 
+### TODO
+Implement Graph QL Endpoints
+
 ### Usage
 
 Before using the package configuration is needed to set up in the `.env` file
