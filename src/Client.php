@@ -21,13 +21,13 @@ class Client
     public function __construct()
     {
         $options = new Options();
-        $options->setType(config('shopify.is_private'));
         $options->setVersion(config('shopify.version'));
+        $options->setApiKey(config('shopify.api_key'));
+        $options->setApiSecret(config('shopify.api_secret'));
 
         $this->api = new BasicShopifyAPI($options);
         $this->api->setSession(new Session(
-            config('shopify.shop'),
-            config('shopify.access_token')
+            config('shopify.shop')
         ));
     }
 
