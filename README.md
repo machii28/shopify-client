@@ -10,8 +10,15 @@ You can install the package via composer:
 composer require markc/shopify-client
 ```
 
+After the installation run the `php artisan vendor:publish --tag=shopify-client-config` to publish the 
+config file. 
+
+**In able to make a call you need to set the shopify_access_token by setting it through 
+config(['shopify.access_token', {{shopif_access_token_here}}])**
+
 ### TODO
-Implement Graph QL Endpoints
+* Implement Graph QL Endpoints
+* Create a single instance of access token
 
 ### Usage
 
