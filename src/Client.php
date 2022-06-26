@@ -24,10 +24,12 @@ class Client
         $options->setVersion(config('shopify.version'));
         $options->setApiKey(config('shopify.api_key'));
         $options->setApiSecret(config('shopify.api_secret'));
+        $options->isPrivate(config('shopify.is_private'));
 
         $this->api = new BasicShopifyAPI($options);
         $this->api->setSession(new Session(
-            config('shopify.shop')
+            config('shopify.shop'),
+            config('shopify.access_token')
         ));
     }
 
