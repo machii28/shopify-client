@@ -12,7 +12,7 @@ class ShopifyClientProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/shopify.php' => base_path() . '/config/'
+            __DIR__ . '/../config/shopify.php' => base_path() . '/config/shopify.php'
         ], 'shopify-client-config');
     }
 
